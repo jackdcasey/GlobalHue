@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="city" :style="cssProps">
-            <span id="cityName">{{city.city}}</span>
-            <span id="cityColor">{{city.color}}</span>
+            <span class="citytext">{{city.city}}</span>
+            <span class="citytext">{{city.color}}</span>
         </div>
     </div>
 </template>
@@ -16,8 +16,22 @@ export default {
     computed: {
         cssProps() {
             return {
-                '--bg': this.city.color
+                '--bg': this.city.color,
+                '--textcolor': this.isDark(this.hexToRgb(this.city.color)) ? '#FFFFFF' : '#000000'
             }
+        }
+    },
+    methods: {
+        hexToRgb: function hexToRgb(hex) {
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        },
+        isDark: function isDark(color) {
+            return color.r < 160 && color.b < 160 && color.g < 160
         }
     }
 }
@@ -36,6 +50,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.citytext {
+    color: var(--textcolor);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 span:first-of-type {
