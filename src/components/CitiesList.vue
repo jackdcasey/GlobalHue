@@ -20,7 +20,7 @@ export default {
     },
     mounted() {
         axios
-            .get('https://api.globalhue.xyz/cities')
+            .get('https://api.globalhue.xyz/cities/')
                 .then(res => this.cities = res.data.Items)
                 .then(() => this.cities.sort((a, b) => b.timedata.raw_offset - a.timedata.raw_offset))
                 .catch(err => console.log(err))
