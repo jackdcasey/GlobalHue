@@ -2,8 +2,8 @@
     <div>
         <div class="city" :style="cssProps">
             <span class="citytext">{{city.city}}</span>
-            <span class="citytext">{{city.color}}</span>
-            <span class="citytext">{{displaytime}}</span>
+            <span id="color" class="citytext halfopacity mono">{{city.color}}</span>
+            <span id="time" class="citytext halfopacity mono">{{displaytime}}</span>
         </div>
     </div>
 </template>
@@ -68,8 +68,16 @@ export default {
     padding-right: 15px;
 }
 
-span:first-of-type {
-    flex: 1;
+.halfopacity {
+    opacity: 0.5;
+}
+
+.mono {
+    font-family:'Courier New', Courier, monospace
+}
+
+#time {
+    min-width: 180px;
 }
 
 </style>
