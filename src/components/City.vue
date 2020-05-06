@@ -3,6 +3,7 @@
         <div class="city" :style="cssProps">
             <span class="citytext">{{city.city}}</span>
             <span class="citytext">{{city.color}}</span>
+            <span class="citytext">{{displaytime}}</span>
         </div>
     </div>
 </template>
@@ -12,6 +13,15 @@ export default {
     name: 'City',
     props: {
         city: Object
+    },
+    data() {
+        return {
+            displaytime: null
+        }
+    },
+    mounted() {
+        let options = { hour: 'numeric', minute: 'numeric', hour12: true, timeZone: this.city.timedata.timezone }
+        this.displaytime = new Date().toLocaleString('en-US', options)
     },
     computed: {
         cssProps() {
