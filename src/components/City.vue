@@ -2,8 +2,8 @@
     <div>
         <div class="city" :style="cssProps">
             <span class="citytext">{{city.city}}</span>
-            <span id="color" class="citytext halfopacity mono">{{city.color}}</span>
-            <span id="time" class="citytext halfopacity mono">{{displaytime}}</span>
+            <span id="color" class="citytext mono">{{city.color}}</span>
+            <span id="time" class="citytext mono">{{displaytime}}</span>
         </div>
     </div>
 </template>
@@ -66,10 +66,6 @@ export default {
     color: var(--textcolor);
     padding-left: 15px;
     padding-right: 15px;
-}
-
-.halfopacity {
-    opacity: 0.5;
 }
 
 .mono {

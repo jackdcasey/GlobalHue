@@ -27,8 +27,9 @@ body {
 }
 
 .wrap {
-background: rgb(9,0,162);
-background: linear-gradient(90deg, rgba(12,0,214,0.4) 0%, rgba(0,212,255,0.4) 100%);
+  background: rgb(64,64,64);
+  background: linear-gradient(90deg, rgba(64,64,64,1) 0%, rgba(135,135,135,1) 100%);
+
   width: 100%;
   height: 100%;
 }

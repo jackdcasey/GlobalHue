@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <nav class="navbar navbar-fixed-top navbar-dark bg-dark">
+        <nav class="navbar">
         <a class="navbar-brand">GlobalHue</a>
         <span class="navbar-text">See the color of the sky, from around the world!</span>
         <a class="github-button" href="https://github.com/jackdcasey/globalhue" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star jackdcasey/globalhue on GitHub">Star</a>        </nav>
@@ -21,6 +21,11 @@ export default {
 <style>
 
 .wrapper {
+  color: #ffffff;
+
+  background: rgb(12,0,214);
+  background: linear-gradient(to right, rgba(12,0,214,1) 0%, rgba(0,161,255,1) 100%);
+
   position: sticky;
   top: 0;
 }
