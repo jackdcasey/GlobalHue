@@ -50,11 +50,11 @@ export default {
 <style>
 .city {
     width: 100%;
-    height: 100px;
+    height: 10vmax;
 
     background: var(--bg);
 
-    font-size: xx-large;
+    font-size: 2vw;
     vertical-align: middle;
 
     display: flex;
@@ -77,7 +77,7 @@ export default {
 }
 
 #time {
-    min-width: 180px;
+    min-width: 2vw;
 }
 
 </style>
