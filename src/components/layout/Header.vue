@@ -23,8 +23,8 @@ export default {
 .wrapper {
   color: #ffffff;
 
-  background: rgb(12,0,214);
-  background: linear-gradient(to right, rgba(12,0,214,1) 0%, rgba(0,161,255,1) 100%);
+  background: rgb(0,48,143);
+  background: linear-gradient(90deg, rgba(0,48,143,1) 0%, rgba(108,180,238,1) 100%);
 
   position: sticky;
   top: 0;
