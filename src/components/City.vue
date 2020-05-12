@@ -2,6 +2,7 @@
     <div>
         <div class="city" :style="cssProps">
             <span class="citytext">{{city.city}}</span>
+            <span class="citytext" v-show=!this.city.success>Webcam Offline 😔</span>
             <span id="color" class="citytext mono">{{city.color}}</span>
             <span id="time" class="citytext mono">{{displaytime}}</span>
         </div>
