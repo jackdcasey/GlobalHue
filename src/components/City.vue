@@ -28,7 +28,8 @@ export default {
         cssProps() {
             return {
                 '--bg': this.city.color,
-                '--textcolor': this.isDark(this.hexToRgb(this.city.color)) ? '#FFFFFF' : '#000000'
+                '--textcolor': this.isDark(this.hexToRgb(this.city.color)) ? '#FFFFFF' : '#000000',
+                //'--history': `linear-gradient(to right, ${this.city.history.map(({ color }) => color).join(', ')})`,
             }
         }
     },
@@ -61,6 +62,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.city:hover {
+    background: var(--history)
 }
 
 .citytext {
